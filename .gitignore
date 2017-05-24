@@ -24,3 +24,5 @@ hs_err_pid*
 /android/.idea/
 /android/.gradle/
 /.idea/
+*.DS_Store
+/android/build/
