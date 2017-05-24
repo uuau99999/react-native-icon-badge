@@ -1,5 +1,5 @@
 {
-  "name": "react-native-icon-badge",
+  "name": "@uuau99999/react-native-icon-badge",
   "version": "1.0.0",
   "description": "an react native plugin which can set app icon badge ",
   "main": "RNIconBadge.js",
