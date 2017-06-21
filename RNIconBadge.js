@@ -1,4 +1,4 @@
 
-import { NativeModules } from 'react-native';
+var RNIconBadge = require('react-native').NativeModules.RNIconBadge;
 
-module.exports = NativeModules.RNIconBadge;
+module.exports = RNIconBadge;
