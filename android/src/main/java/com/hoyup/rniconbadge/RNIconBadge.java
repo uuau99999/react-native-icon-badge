@@ -22,7 +22,8 @@ public class RNIconBadge implements ReactPackage {
     return modules;
   }
 
-  @Override
+  // @Override
+  // DEPRECATED in react native 0.47
   public List<Class<? extends JavaScriptModule>> createJSModules() {
   	return Collections.emptyList();
   }
