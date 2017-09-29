@@ -3,12 +3,10 @@ package com.hoyup.rniconbadge;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.WritableMap;
 
 import me.leolin.shortcutbadger.ShortcutBadger;
 
@@ -59,14 +57,12 @@ public class RNIconBadgeModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getBadgeNumber(Promise promise) {
-        WritableMap map = Arguments.createMap();
         try {
-            map.putInt("badgeNumber", getBadge());
+            promise.resolve(getBadge());
         } catch (Exception e) {
             e.printStackTrace();
-            promise.reject("can not get badge number due to an exception occurs" ,e);
+            promise.reject("can not get badge number due to an exception occurs", e);
         }
-        promise.resolve(map);
     }
 
     private int getBadge() {
@@ -80,7 +76,7 @@ public class RNIconBadgeModule extends ReactContextBaseJavaModule {
         editor.apply();
     }
 
-    private SharedPreferences getSharedPreferences (Context context) {
+    private SharedPreferences getSharedPreferences(Context context) {
         return context.getSharedPreferences(KEY, Context.MODE_PRIVATE);
     }
 }
