@@ -13,6 +13,8 @@ module.exports =
             })
           })
         },
-        clearBadge: PushNotificationIOS.setApplicationIconBadgeNumber(0),
+        clearBadge: function() {
+          PushNotificationIOS.setApplicationIconBadgeNumber(0)
+        }
       }
     : RNIconBadge
