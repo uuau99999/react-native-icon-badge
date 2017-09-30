@@ -1,6 +1,6 @@
 {
   "name": "@uuau99999/react-native-icon-badge",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "an react native plugin which can set app icon badge for both ios and android",
   "main": "RNIconBadge.js",
   "repository": {
